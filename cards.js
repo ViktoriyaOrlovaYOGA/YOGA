@@ -26,6 +26,9 @@ document.getElementById('back').style.display = 'none';
             let q = this.getElementsByClassName('card_button')[0].id;
             if (json[q]['exists']){
                 let btn = document.getElementById('popup_btn');
+                if (q==0){
+                    btn.innerText = 'предзапись'
+                }else{btn.innerText = 'хочу'}
                 btn.style.display = 'initial';
                 let list = document.getElementById('popup_list');
                 list.style.display = 'block';
